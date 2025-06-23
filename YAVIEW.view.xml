@@ -1,0 +1,36 @@
+<mvc:View controllerName="annotation.view.controller.YAVIEW"
+xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:sf="sap.ui.comp.smartfilterbar"
+    xmlns:st="sap.ui.comp.smarttable"    
+>
+    <!-- <Page id="page" title="{i18n>title}">
+    </Page> -->
+
+    <f:DynamicPage 
+        id="idDynamicPage"
+        title="{i18n>title}"
+        fitContent="true"
+    >
+        <f:header>
+            <!-- 검색조건 -->
+            <f:DynamicPageHeader id="idDynamicPageHeader">
+                <sf:SmartFilterBar 
+                    id="idSmartFilterBar"
+                    entitySet="YA03_CDS_WA_01"
+                />
+            </f:DynamicPageHeader>
+        </f:header>
+        <f:content>
+            <!-- 검색결과 -->
+            <st:SmartTable 
+                id="idSmartTable"
+                entitySet="YA03_CDS_WA_01"
+                tableType="ResponsiveTable"
+                smartFilterId="idSmartFilterBar"
+                header="비행 목록"
+            />
+        </f:content>
+    </f:DynamicPage>
+</mvc:View>
